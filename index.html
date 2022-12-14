@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <a class="name" href="#">
+                <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                <span class="text">BooksRead</span>
+            </a>
+            <nav>
+                <ul>
+                    <li class="link"><a href="#">Books</a></li>
+                    <li class="link"><a href="#">Comics</a></li>
+                    <li class="link"><a href="#">Manga</a></li>
+                    <li class="link"><a href="#">News</a></li>
+                    <li class="link"><a href="#">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+
+        </div>
+        <div class="selection">
+            <div class="navigation">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                            <span class="icon">&#8544;</span>
+                            <span class="text">First</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">&#8545;</span>
+                            <span class="text">Second</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">&#8546;</span>
+                            <span class="text">Third</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">&#8547;</span>
+                            <span class="text">Fourth</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#">
+                            <span class="icon">&#8548;</span>
+                            <span class="text">Fifth</span>
+                        </a>
+                    </li>
+                    <div class="indicate"></div>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) => 
+        item.addEventListener('click', activeLink)) 
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
